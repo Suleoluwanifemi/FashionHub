@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - FashionHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">FashionHub</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Sell</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Your Shopping Cart</h1>
+
+    <!-- 👇 Empty cart message added -->
+    <div id="empty-cart" style="display:none;">Your cart is empty 😔</div>
+
+    <div id="cart-items"></div>
+
+    <!-- 👇 ID updated to match JS -->
+    <h3>Total: <span id="cart-total">₦0</span></h3>
+
+    <a href="checkout.html">
+        <button id="checkout-btn">Proceed to Checkout</button>
+      </a>
+      
+  </main>
+
+  <script src="cart.js"></script>
+</body>
+</html>

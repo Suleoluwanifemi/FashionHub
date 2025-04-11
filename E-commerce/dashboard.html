@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seller Dashboard - FashionHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">FashionHub</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <h1>Welcome, <span id="seller-name"></span> 👋</h1>
+    <p>Email: <span id="seller-email"></span></p>
+    <p>Phone: <span id="seller-phone"></span></p>
+
+    <section class="upload-section">
+      <h2>Upload New Product</h2>
+      <form id="product-form">
+        <input type="text" id="product-name" placeholder="Product Name" required>
+        <input type="text" id="product-price" placeholder="Price" required>
+        <input type="text" id="product-category" placeholder="Category" required>
+        <textarea id="product-description" placeholder="Description" required></textarea>
+        <input type="text" id="product-image" placeholder="Image URL" required>
+        <button type="submit">Upload Product</button>
+      </form>
+    </section>
+  </main>
+  <section id="orders-section">
+    <h2>Customer Orders</h2>
+    <div id="orders-list"></div>
+  </section>
+
+  <script>
+    // Check if seller exists
+    const seller = JSON.parse(localStorage.getItem("seller"));
+    if (!seller) {
+      alert("You must register first.");
+      window.location.href = "register.html";
+    } else {
+      document.getElementById("seller-name").textContent = seller.name;
+      document.getElementById("seller-email").textContent = seller.email;
+      document.getElementById("seller-phone").textContent = seller.phone;
+    }
+
+    // Logout button
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      localStorage.removeItem("seller");
+      alert("Logged out successfully.");
+      window.location.href = "index.html";
+    });
+
+    // Upload form
+    const productForm = document.getElementById("product-form");
+    productForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("product-name").value;
+      const price = document.getElementById("product-price").value;
+      const category = document.getElementById("product-category").value;
+      const description = document.getElementById("product-description").value;
+      const image = document.getElementById("product-image").value;
+
+      console.log("New Product:", { name, price, category, description, image });
+
+      alert("Product uploaded successfully!");
+      productForm.reset();
+    });
+  </script>
+ 
+  
+</body>
+</html>

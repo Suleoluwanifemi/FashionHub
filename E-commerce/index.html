@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
+
+<!-- Firebase Config -->
+<script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAP7p5Pk2rlWKK1iC5uzbrqqBeOzynugNM",
+      authDomain: "fashhub-9c9fc.firebaseapp.com",
+      projectId: "fashhub-9c9fc",
+      storageBucket: "fashhub-9c9fc.firebasestorage.app",
+      messagingSenderId: "346854470344",
+      appId: "1:346854470344:web:48a7d8f6649e33c85a2bfd",
+      measurementId: "G-FV8WXKXJ2Y"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+</script>
+
+<body>
+    <header>
+        <div class="logo">FashionHub</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="register.html">Sell</a></li>
+                <li><a href="signin.html" class="signin-btn">Sign In</a></li>
+                <li><a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>  
+
+    <section class="hero">
+        <h1>Find Your Style</h1>
+        <p>Discover unique different style and aesthetic pieces curated for your taste</p>
+        <a href="#" class="btn">Shop Now</a>
+    </section>
+
+    <section class="products">
+        <h2>Trending Styles</h2>
+        <div class="product-grid">
+            <!-- Example Products -->
+            <div class="product">
+                <h3>Earthy Outfit</h3>
+                <p>₦5000</p>
+                <button class="add-to-cart" 
+                    data-id="1" 
+                    data-name="Earthy Outfit" 
+                    data-price="5000">
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="product">
+                <h3>Y2K Jacket</h3>
+                <p>₦8500</p>
+                <button class="add-to-cart" 
+                    data-id="2" 
+                    data-name="Y2K Jacket" 
+                    data-price="8500">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="filter">
+        <button class="filter-btn" data-category="all">All Categories</button>
+        <button class="filter-btn" data-category="Earthy/Y2k">Earthy/Y2k</button>
+        <button class="filter-btn" data-category="Corporate/business core">Corporate/business core</button>
+        <button class="filter-btn" data-category="Alternative(Alte)">Alternative(Alte)</button>
+        <button class="filter-btn" data-category="Opium">Opium</button>
+        <button class="filter-btn" data-category="Accessories">Accessories</button>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script> <!-- Cart Functionality -->
+</body>
+</html>
