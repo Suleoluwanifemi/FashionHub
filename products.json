@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Earthy crop top",
+        "price": "$45",
+        "image": "top.jpg",
+        "category": "Earthy/Y2k"
+    },
+    {
+        "id": 2,
+        "name": "Maxi skirt",
+        "price": "$50",
+        "image": "maxiskirt.jpg",
+        "category": "Earthy/Y2k"
+    },
+    {
+        "id": 3,
+        "name": "Earthy Cardigan",
+        "price": "$30",
+        "image": "Cardigan.jpg",
+        "category": "Earthy/Y2k"
+    },
+    {
+        "id": 4,
+        "name": "Headwraps",
+        "price": "$120",
+        "image": "Headwrap.jpg",
+        "category": "Earthy/Y2k"
+    },
+    {
+        "id": 5,
+        "name": "White coporate shirt",
+        "price": "$60",
+        "image": "White shirt.jpg",
+        "category": "Coporate/business core"
+    },
+    {
+        "id": 6,
+        "name": "Waist coat",
+        "price": "$25",
+        "image": "Waist coat.jpg",
+        "category": "Coporate/business core"
+    },
+    {
+        "id": 7,
+        "name": "Blazers",
+        "price": "$80",
+        "image": "Blazers.jpg",
+        "category": "Coporate/business core"
+    },
+    {
+        "id": 8,
+        "name": "Coporate Pants",
+        "price": "$95",
+        "image": "Coporatepants.jpg",
+        "category": "Coporate/business core"
+    },
+    {
+        "id": 9,
+        "name": "Overly Baggy Pants",
+        "price": "$40",
+        "image": "overlybaggypants.jpg",
+        "category": "Alternative(Alte)"
+    },
+    {
+        "id": 10,
+        "name": "Baggy Tees",
+        "price": "$35",
+        "image": "Baggy Tees.jpg",
+        "category": "Alternative(Alte)"
+    },
+    {
+        "id": 11,
+        "name": "Flannel Shirt",
+        "price": "$55",
+        "image": "Flannel.jpg",
+        "category": "Alternative(Alte)"
+    },
+    {
+        "id": 12,
+        "name": "Jorts",
+        "price": "$75",
+        "image": "Jorts.jpg",
+        "category": "Alternative(Alte)"
+    },
+    {
+        "id": 13,
+        "name": "Opium Pants",
+        "price": "$85",
+        "image": "Opium Pants.jpg",
+        "category": "Opium"
+    },
+    {
+        "id": 14,
+        "name": "Opium Jacket",
+        "price": "$20",
+        "image": "Opium jacket.jpg",
+        "category": "Opium"
+    },
+    {
+        "id": 15,
+        "name": "Accessories",
+        "price": "$40",
+        "image": "Jewelries.jpg",
+        "category": "Accessories"
+    }
+]

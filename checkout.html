@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout - FashionHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">FashionHub</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Back to Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Checkout</h1>
+
+    <form id="checkout-form">
+      <label>Full Name:</label>
+      <input type="text" id="fullname" required>
+
+      <label>Shipping Address:</label>
+      <textarea id="address" required></textarea>
+
+      <label>Phone Number:</label>
+      <input type="tel" id="phone" required>
+
+      <h3>Total: <span id="checkout-total">₦0</span></h3>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </main>
+
+  <script> 
+    document.getElementById("checkout-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+  
+    const name = document.getElementById("fullname").value;
+    const address = document.getElementById("address").value;
+    const phone = document.getElementById("phone").value;
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  
+    const order = {
+      customer: name,
+      address,
+      phone,
+      items: cart,
+      total,
+      date: new Date().toLocaleString()
+    };
+  
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+  
+    alert("Order placed successfully! 🎉");
+    localStorage.removeItem("cart");
+    window.location.href = "index.html";
+  });
+  
+  </script>
+   
+  
+  
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Product</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <section class="upload-product">
+        <h2>Upload Your Product</h2>
+        <p>in order to be able to display your product, kindly provide the detalis of what you want to sell</p>
+        <form id="upload-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+
+            <label for="product-category">Product Category:</label>
+            <select id="product-category" name="product-category" required>
+                <option value="Earthy/Y2k">Earthy/Y2k</option>
+                <option value="Coporate/business core">Coporate/business core</option>
+                <option value="Alternative(Alte)">Alternative(Alte)</option>
+                <option value="Opium">Opium</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+
+            <label for="product-price">Price (₦):</label>
+            <input type="number" id="product-price" name="product-price" placeholder="Enter price" required>
+
+            <label for="product-image">Upload Image:</label>
+            <input type="file" id="product-image" name="product-image" accept="image/*" required>
+
+            <label for="product-description">Description:</label>
+            <textarea id="product-description" name="product-description" rows="4" placeholder="Describe your product..." required></textarea>
+
+            <button type="submit">Upload Product</button>
+        </form>
+    </section>
+
+</body>
+</html>

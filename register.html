@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as a Seller</title>
+    <link rel="stylesheet" href="style.css"> 
+
+    <!-- Firebase Scripts (Correctly placed) -->
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <h1>Kindly input your details to become a seller</h1>
+    <p>Fill in the required details in order to display your products on Fashion Hub!</p>
+
+    <section class="seller-registration">
+        <h2>Register as a Seller</h2>
+        <form id="seller-form"> 
+            <label for="seller-name">Full Name:</label>
+            <input type="text" id="seller-name" required>
+
+            <label for="seller-email">Email:</label>
+            <input type="email" id="seller-email" required>
+
+            <label for="seller-phone">Phone Number:</label>
+            <input type="text" id="seller-phone" required>
+
+            <label for="seller-password">Password:</label>
+            <input type="password" id="seller-password" required>
+
+            <label for="shopName">Shop Name:</label>
+            <input type="text" id="shopName" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <p><a href="upload.html">Upload your product</a></p>
+
+    <!-- JavaScript -->
+    <script src="register.js"></script> 
+</body>
+</html>
